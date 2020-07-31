@@ -1,0 +1,66 @@
+{
+  "product": {
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+      "default": {
+        "format": "%(asctime)s [%(name)s] (%(levelname)s) %(message)s",
+        "datefmt": "%m-%d %H:%M:%S"
+      }
+    },
+    "handlers": {
+      "console": {
+        "class": "logging.StreamHandler",
+        "level": "INFO",
+        "formatter": "default",
+        "stream": "ext://sys.stdout"
+      },
+      "file": {
+        "class": "logging.FileHandler",
+        "level": "INFO",
+        "formatter": "default",
+        "filename": "weather.log",
+        "encoding": "utf8"
+      }
+    },
+    "root": {
+      "level": "INFO",
+      "handlers": [
+        "console",
+        "file"
+      ]
+    }
+  },
+  "debug": {
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+      "default": {
+        "format": "%(asctime)s [%(name)s] (%(levelname)s) %(message)s",
+        "datefmt": "%m-%d %H:%M:%S"
+      }
+    },
+    "handlers": {
+      "console": {
+        "class": "logging.StreamHandler",
+        "level": "DEBUG",
+        "formatter": "default",
+        "stream": "ext://sys.stdout"
+      },
+      "file": {
+        "class": "logging.FileHandler",
+        "level": "DEBUG",
+        "formatter": "default",
+        "filename": "weather_debug.log",
+        "encoding": "utf8"
+      }
+    },
+    "root": {
+      "level": "DEBUG",
+      "handlers": [
+        "console",
+        "file"
+      ]
+    }
+  }
+}
